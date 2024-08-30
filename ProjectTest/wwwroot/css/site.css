@@ -1,0 +1,378 @@
+.carousel-container {
+    margin: 20px 0;
+}
+
+.carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 5px solid #d500f9;
+}
+
+.book-cover {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .book-cover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+
+.book-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #6200ea;
+    margin-bottom: 15px;
+}
+
+.book-author {
+    font-size: 1.6rem;
+    color: #757575;
+    margin-bottom: 25px;
+}
+
+.book-info {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 30px;
+}
+
+    .book-info .label {
+        font-weight: 600;
+        color: #007bff;
+    }
+
+.description-container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+.description-title {
+    font-size: 1.8rem;
+    color: #6200ea;
+    margin-bottom: 20px;
+}
+
+.description-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #343a40;
+}
+
+.card-img-top {
+    border-bottom: 5px solid #d500f9;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    color: #6200ea;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #343a40;
+}
+
+.section {
+    margin-top: 50px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #6200ea;
+    margin-bottom: 20px;
+}
+
+
+/* Reset básico */
+body, h5, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme necessário */
+    margin: auto;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px; /* Adiciona bordas arredondadas ao carrossel */
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+    }
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo translúcido para a legenda */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px; /* Adiciona bordas arredondadas à legenda */
+    text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3); /* Fundo transparente para botões de controle */
+    border-radius: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    border: 2px solid #fff; /* Borda branca para os ícones */
+    border-radius: 50%; /* Torna os ícones circulares */
+}
+
+    .carousel-control-prev-icon:after,
+    .carousel-control-next-icon:after {
+        font-family: 'FontAwesome';
+        color: #fff;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: "\f053"; /* Código para o ícone de seta para a esquerda (FontAwesome) */
+    }
+
+    .carousel-control-next-icon:after {
+        content: "\f054"; /* Código para o ícone de seta para a direita (FontAwesome) */
+    }
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte em telas menores */
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 7%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        font-size: 0.7rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+}
+
+/* Estilização do Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme necessário */
+    margin: auto;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px; /* Adiciona bordas arredondadas ao carrossel */
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Define a altura fixa para o carrossel */
+}
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%; /* Garante que a imagem cubra toda a altura do item */
+        object-fit: cover; /* Faz com que a imagem cubra o container sem distorção */
+        border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+    }
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo translúcido para a legenda */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px; /* Adiciona bordas arredondadas à legenda */
+    text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3); /* Fundo transparente para botões de controle */
+    border-radius: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    border: 2px solid #fff; /* Borda branca para os ícones */
+    border-radius: 50%; /* Torna os ícones circulares */
+}
+
+    .carousel-control-prev-icon:after,
+    .carousel-control-next-icon:after {
+        font-family: 'FontAwesome';
+        color: #fff;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: "\f053"; /* Código para o ícone de seta para a esquerda (FontAwesome) */
+    }
+
+    .carousel-control-next-icon:after {
+        content: "\f054"; /* Código para o ícone de seta para a direita (FontAwesome) */
+    }
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte em telas menores */
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 7%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        font-size: 0.7rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+}
+
+/* Barra Superior */
+.navbar {
+    background-color: #007bff; /* Cor de fundo principal */
+    padding: 0.8rem 1.5rem; /* Espaçamento interno */
+    border-bottom: 2px solid #0056b3; /* Borda inferior para destacar a barra */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Tamanho da fonte do logo */
+    font-weight: bold;
+    color: #fff; /* Cor do texto */
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url('path/to/your/menu-icon.svg'); /* Caminho para o ícone do menu */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 1rem; /* Espaçamento entre itens do menu */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem; /* Tamanho da fonte dos links */
+    color: #fff; /* Cor dos links */
+    padding: 0.5rem 1rem; /* Espaçamento interno dos links */
+    border-radius: 5px; /* Borda arredondada para links */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+    .navbar-nav .nav-link:hover {
+        background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        color: #fff; /* Cor do texto ao passar o mouse */
+    }
+
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold; /* Destaque para o item ativo */
+    background-color: #0056b3; /* Cor de fundo para o item ativo */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+        .navbar-nav .nav-item {
+            margin: 0.5rem 0; /* Espaçamento entre itens do menu em telas pequenas */
+        }
+}
+
+
+

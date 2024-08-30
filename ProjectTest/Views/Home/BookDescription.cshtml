@@ -1,0 +1,57 @@
+﻿@model ProjectTest.Models.BookDescriptionViewModel
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<body>
+    <header class="header">
+        <h1 class="display-4">Detalhes do Livro</h1>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <img src="@Model.Book.CoverImageUrl" class="img-fluid book-cover" alt="Capa do Livro">
+            </div>
+            <div class="col-lg-8">
+                <h2 class="book-title">@Model.Book.Title</h2>
+                <h4 class="book-author">Autor: @Model.Book.Author</h4>
+                <div class="book-info">
+                    <p><span class="label">Editora:</span> @Model.Book.Publisher</p>
+                    <p><span class="label">Ano de Publicação:</span> @Model.Book.PublicationYear</p>
+                    <p><span class="label">Páginas:</span> @Model.Book.Pages</p>
+                    <p><span class="label">ISBN:</span> @Model.Book.ISBN</p>
+                </div>
+
+                <div class="description-container">
+                    <h3 class="description-title">Descrição</h3>
+                    <p class="description-content">
+                        @Model.Book.Description
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Mais Livros</h2>
+            <div class="row">
+                @foreach (var book in Model.RecommendedBooks)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="@book.CoverImageUrl" class="card-img-top" alt="Livro Recomendado">
+                            <div class="card-body">
+                                <h5 class="card-title">@book.Title</h5>
+                                <p class="card-text">Venha conferir.</p>
+                                <a href="@Url.Action("BookDescription", "Home", new { id = book.Id })" class="btn btn-primary">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+ 
+</body>
+</html>

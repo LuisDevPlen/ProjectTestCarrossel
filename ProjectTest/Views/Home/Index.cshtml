@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Book>
+
+@{
+    ViewData["Title"] = "Página Principal";
+}
+
+<div class="carousel-container">
+    <div id="bookCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            @foreach (var book in Model)
+            {
+                <!-- <div class="carousel-item @(book == Model.First() ? "active" : "")">
+                    <a href="@book.DetailsUrl">
+                        <img src="@book.CoverImageUrl" class="d-block w-100" alt="@book.Title">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>@book.Title</h5>
+                        </div>
+                    </a>
+                </div>-->
+
+                <div class="carousel-item @(book == Model.First() ? "active" : "")">
+                    <a href="@Url.Action("BookDescription","Home", new { id = book.Id })">
+                        <img src="@book.CoverImageUrl" class="d-block w-100" alt="@book.Title">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>@book.Title</h5>
+                        </div>
+                    </a>
+                </div>
+
+            }
+        </div>
+        <a class="carousel-control-prev" href="#bookCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#bookCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

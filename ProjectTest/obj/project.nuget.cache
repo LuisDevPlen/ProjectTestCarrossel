@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oClL/1SuxzD2ZQ2SljhwwkKNlf1FvNrW9tYRxUvG0Bn7fdVxspTWaYq572SJSgmqr1hPhuBGG+LZzPUSHoJ8Qg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alves\\Documents\\open\\bookCarrosselProject\\ProjectTest\\ProjectTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alves\\.nuget\\packages\\microsoft.net.runtime.webassembly.sdk\\8.0.8\\microsoft.net.runtime.webassembly.sdk.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
